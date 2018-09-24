@@ -3,9 +3,9 @@ services:
   wobbly-backend-service:
     build:
       context: ././
-      dockerfile: deploy/Dockerfile
+      dockerfile: ../Dockerfile
     image: wobbly-django
-    command: ./docker-entrypoint.sh
+    command: ../docker-entrypoint.sh
     volumes:
       - ././:/code
     ports:
