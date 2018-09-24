@@ -5,7 +5,7 @@ services:
     ports:
       - "5432:5432"
 
-  wobbly-backend-service:
+  app:
     build:
       context: .
       dockerfile: deploy/Dockerfile
