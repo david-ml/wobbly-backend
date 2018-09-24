@@ -3,3 +3,5 @@ djangorestframework==3.8.2
 django-rest-swagger==2.2.0
 psycopg2-binary==2.7.5
 gunicorn==19.9.0
+graphene>=2.1
+graphene-django>=2.0

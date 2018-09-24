@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_swagger',
+    'graphene_django',
+    'app.models'
 ]
 
 MIDDLEWARE = [
