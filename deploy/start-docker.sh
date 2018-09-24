@@ -7,10 +7,10 @@ if [ $# == 0 ]; then usage; fi
 while getopts ":dp" opt; do
     case "$opt" in
         d)
-          docker-compose -f docker-compose-development.yml up
+          docker-compose -f dev/docker-compose.yml up
           ;;
         p)
-          docker-compose -f docker-compose-production.yml up
+          docker-compose -f prod/docker-compose.yml up
           ;;
         *)
           usage
