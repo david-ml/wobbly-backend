@@ -7,12 +7,13 @@ services:
     image: wobbly-django
     entrypoint: deploy/docker-entrypoint.sh
     volumes:
-      - ../../:/code
+      - ../../.:/code
     ports:
       - "8080:8080"
     environment:
       - DJANGO_SECRET_KEY
       - DEBUG
+      - PRODUCTION=True
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_NAME=${POSTGRES_NAME}
       - POSTGRES_HOST=${POSTGRES_HOST}
