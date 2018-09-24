@@ -5,7 +5,7 @@ services:
       context: ../../
       dockerfile: deploy/Dockerfile
     image: wobbly-django
-    entrypoint: deploy/docker-entrypoint.sh
+    entrypoint: /code/deploy/docker-entrypoint.sh
     volumes:
       - ../../.:/code
     ports:
