@@ -4,9 +4,9 @@ ENV PYTHONUNBUFFERED 1
 
 # create and populate /code
 RUN mkdir /code
-COPY requirements.txt /code/
+COPY requirements.txt /code
 WORKDIR /code
 RUN pip install --upgrade pip 
 RUN pip install -r requirements.txt
 
-COPY /. /code/
+COPY . /code
