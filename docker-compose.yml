@@ -1,9 +1,12 @@
 version: '3.4' 
-services:    
+services:
   db:
     image: postgres
     ports:
       - "5432:5432"
+
+#  stage-app:
+#    image: wobbly-django
 
   app:
     build:
@@ -17,8 +20,8 @@ services:
     depends_on:
       - db
     environment:
-      - DJANGO_SECRET_KEY
-      - DEBUG
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DEBUG=True
       - PRODUCTION=False
       - POSTGRES_USER=postgres
       - POSTGRES_NAME=postgres
