@@ -1,6 +1,6 @@
+-- @david-ml: initial attempts at SQL schema recreation --
+
 -- CREATE TYPE File AS (
-
-
 CREATE EXTENSION citext;
 
 -- create email as case-insensitive text, validate using regex
@@ -28,7 +28,7 @@ CREATE DOMAIN File AS (
     url         ,
 );
 
-----
+---- Original GraphQL Schema ----
 
 type File  {
   contentType: String!

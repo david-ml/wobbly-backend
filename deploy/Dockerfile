@@ -9,7 +9,6 @@ RUN pip install --upgrade pip
 RUN pip install -r code/requirements.txt
 COPY . /code
 
-RUN chmod +x /code
-
-CMD ["/code/deploy/docker-entrypoint.sh"]
+RUN chmod 777 /code/deploy/docker-entrypoint.sh
+CMD /code/deploy/docker-entrypoint.sh
 #ENTRYPOINT ["/code/deploy/docker-entrypoint.sh"]
