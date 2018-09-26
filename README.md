@@ -1,5 +1,11 @@
 # wobbly-backend
 
+## Developer Quickstart
+- Install Docker
+- Clone this repo
+- From the base `wobbly-backend` directory, run `docker-compose up --build`. This will build the underlying Docker images and execute the instructions in `docker-compose.yml`.
+
+
 ## Directions
 
 ### Fill in Django secret key
