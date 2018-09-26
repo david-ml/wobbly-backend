@@ -4,11 +4,12 @@ ENV PYTHONUNBUFFERED 1
 
 # create and populate /code
 RUN mkdir /code
-COPY requirements.txt /code
+COPY ./requirements.txt /code
 RUN pip install --upgrade pip 
-RUN pip install -r code/requirements.txt
+RUN pip install -r /code/requirements.txt
 COPY . /code
+WORKDIR /code
 
-RUN chmod 777 /code/deploy/docker-entrypoint.sh
-CMD /code/deploy/docker-entrypoint.sh
+RUN chmod 777 deploy/docker-entrypoint.sh
+CMD deploy/docker-entrypoint.sh
 #ENTRYPOINT ["/code/deploy/docker-entrypoint.sh"]

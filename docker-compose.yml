@@ -4,10 +4,6 @@ services:
     image: postgres
     ports:
       - "5432:5432"
-
-#  stage-app:
-#    image: wobbly-django
-
   app:
     build:
       context: .
