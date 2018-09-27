@@ -5,8 +5,8 @@ ENV PYTHONUNBUFFERED 1
 # create and populate /code
 RUN mkdir /code
 COPY ./requirements.txt /code
-RUN pip install --upgrade pip 
-RUN pip install -r /code/requirements.txt
+RUN pip install --upgrade pip  
+RUN pip install -r /code/requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org
 COPY . /code
 WORKDIR /code
 
